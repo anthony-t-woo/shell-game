@@ -55,6 +55,7 @@ function handleGuess(correctLocation, userGuess) {
     }
 
     winPercent = (wins / total) * 100;
+    winPercent = winPercent.toFixed(1);
     winsEl.textContent = wins;
     lossesEl.textContent = losses;
     totalEl.textContent = total;
