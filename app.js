@@ -14,28 +14,56 @@ const lossesEl = document.getElementById('losses');
 const totalEl = document.getElementById('total-guesses');
 const winPercentEl = document.getElementById('win-percent');
 
+const shellOneInputEl = document.getElementById('shell-one-qty');
+const shellTwoInputEl = document.getElementById('shell-two-qty');
+const shellThreeInputEl = document.getElementById('shell-three-qty');
+
+const shellOneSimulateEl = document.getElementById('shell-one-simulate');
+const shellTwoSimulateEl = document.getElementById('shell-two-simulate');
+const shellThreeSimulateEl = document.getElementById('shell-three-simulate');
+
+const spanOneTimesEl = document.getElementById('spanOne-times');
+const spanTwoTimesEl = document.getElementById('spanTwo-times');
+const spanThreeTimesEl = document.getElementById('spanThree-times');
+
 /* State */
 let wins = 0;
 let losses = 0;
 let total = 0;
 let winPercent = 0;
+
+// let simOne = 0;
+// let simTwo = 0;
+// let simThree = 0;
+
 const shellArray = ['shellOne', 'shellTwo', 'shellThree'];
 
 /* Events */
 shellOneButtonEl.addEventListener('click', () => {
-    const correctShell = getRandomLocation(shellArray);
-    handleGuess(correctShell, 'shellOne');
+    handleGuess(getRandomLocation(shellArray), 'shellOne');
 });
-
 shellTwoButtonEl.addEventListener('click', () => {
-    const correctShell = getRandomLocation(shellArray);
-    handleGuess(correctShell, 'shellTwo');
+    handleGuess(getRandomLocation(shellArray), 'shellTwo');
+});
+shellThreeButtonEl.addEventListener('click', () => {
+    handleGuess(getRandomLocation(shellArray), 'shellTwo');
 });
 
-shellThreeButtonEl.addEventListener('click', () => {
-    const correctShell = getRandomLocation(shellArray);
-    handleGuess(correctShell, 'shellThree');
+// fill in text box spans
+shellOneInputEl.addEventListener('keyup', () => {
+    spanOneTimesEl.textContent = shellOneInputEl.value;
 });
+shellTwoInputEl.addEventListener('keyup', () => {
+    spanTwoTimesEl.textContent = shellTwoInputEl.value;
+});
+shellThreeInputEl.addEventListener('keyup', () => {
+    spanThreeTimesEl.textContent = shellThreeInputEl.value;
+});
+
+// simulate for x amount of guesses
+// shellOneSimulateEl.addEventListener('click', (), => {
+
+// });
 
 /* Display Functions */
 function getRandomLocation(arr) {
@@ -72,13 +100,11 @@ function resetStyles() {
 
 function addLaughingCat(correctLocation) {
     const correctContainer = document.getElementById(`${correctLocation}-container`);
-    console.log(correctContainer);
     correctContainer.classList.add('laughingCat');
 }
 
 function addHeartCat(correctLocation) {
     const correctContainer = document.getElementById(`${correctLocation}-container`);
-    console.log(correctContainer);
     correctContainer.classList.add('heartCat');
 }
 // (don't forget to call any display functions you want to run on page load!)
