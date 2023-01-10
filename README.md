@@ -11,4 +11,14 @@
 -   p element for # of guesses + span element
 -   p element for win percentage + span element
 
+# State
+
+-   number of wins
+-   number of losses
+-   number of guesses
+-   win percentage
+
 # DOM
+
+-   3x button elements
+-   wins, losses, guesses, percentage
