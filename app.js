@@ -26,15 +26,18 @@ const spanOneTimesEl = document.getElementById('spanOne-times');
 const spanTwoTimesEl = document.getElementById('spanTwo-times');
 const spanThreeTimesEl = document.getElementById('spanThree-times');
 
+const wasAtOneEl = document.getElementById('was-at-one');
+const wasAtTwoEl = document.getElementById('was-at-two');
+const wasAtThreeEl = document.getElementById('was-at-three');
+
 /* State */
 let wins = 0;
 let losses = 0;
 let total = 0;
 let winPercent = 0;
-
-// let simOne = 0;
-// let simTwo = 0;
-// let simThree = 0;
+let atOne = 0;
+let atTwo = 0;
+let atThree = 0;
 
 const shellArray = ['shellOne', 'shellTwo', 'shellThree'];
 
@@ -96,6 +99,16 @@ function handleGuess(correctLocation, userGuess) {
         addLaughingCat(correctLocation);
     }
 
+    if (correctLocation === 'shellOne') {
+        atOne++;
+        wasAtOneEl.textContent = atOne;
+    } else if (correctLocation === 'shellTwo') {
+        atTwo++;
+        wasAtTwoEl.textContent = atTwo;
+    } else {
+        atThree++;
+        wasAtThreeEl.textContent = atThree;
+    }
     winPercent = (wins / total) * 100;
     winPercent = winPercent.toFixed(1);
     winsEl.textContent = wins;
