@@ -33,3 +33,43 @@ header .logo {
 main {
     padding: 20px;
 }
+
+.shell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.shells {
+    display: flex;
+    /* justify-items: center; */
+    align-content: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+.shell-pic {
+    height: 200px;
+}
+
+button {
+    width: fit-content;
+}
+
+.results-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-body {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.dot::after {
+    font-size: 8rem;
+    content: '😃';
+    position: absolute;
+}

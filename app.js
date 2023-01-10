@@ -47,6 +47,7 @@ function getRandomLocation(arr) {
 function handleGuess(correctLocation, userGuess) {
     resetStyles();
     total++;
+    // const correctContainer = document.getElementById(`${}`)
 
     if (correctLocation === userGuess) {
         wins++;
