@@ -61,9 +61,21 @@ shellThreeInputEl.addEventListener('keyup', () => {
 });
 
 // simulate for x amount of guesses
-// shellOneSimulateEl.addEventListener('click', (), => {
-
-// });
+shellOneSimulateEl.addEventListener('click', () => {
+    for (let i = 0; i < shellOneInputEl.value; i++) {
+        handleGuess(getRandomLocation(shellArray), 'shellOne');
+    }
+});
+shellTwoSimulateEl.addEventListener('click', () => {
+    for (let i = 0; i < shellTwoInputEl.value; i++) {
+        handleGuess(getRandomLocation(shellArray), 'shellTwo');
+    }
+});
+shellThreeSimulateEl.addEventListener('click', () => {
+    for (let i = 0; i < shellThreeInputEl.value; i++) {
+        handleGuess(getRandomLocation(shellArray), 'shellThree');
+    }
+});
 
 /* Display Functions */
 function getRandomLocation(arr) {
