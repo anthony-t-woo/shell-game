@@ -19,9 +19,52 @@ let wins = 0;
 let losses = 0;
 let total = 0;
 let winPercent = 0;
+const shellArray = ['shellOne', 'shellTwo', 'shellThree'];
 
 /* Events */
+shellOneButtonEl.addEventListener('click', () => {
+    const correctShell = getRandomLocation(shellArray);
+    handleGuess(correctShell, 'shellOne');
+});
+
+shellTwoButtonEl.addEventListener('click', () => {
+    const correctShell = getRandomLocation(shellArray);
+    handleGuess(correctShell, 'shellTwo');
+});
+
+shellThreeButtonEl.addEventListener('click', () => {
+    const correctShell = getRandomLocation(shellArray);
+    handleGuess(correctShell, 'shellThree');
+});
 
 /* Display Functions */
+function getRandomLocation(arr) {
+    const index = Math.floor(Math.random() * arr.length);
+    const correctShell = arr[index];
+    return correctShell;
+}
+
+function handleGuess(correctLocation, userGuess) {
+    resetStyles();
+    total++;
+
+    if (correctLocation === userGuess) {
+        wins++;
+    } else {
+        losses++;
+    }
+
+    winPercent = (wins / total) * 100;
+    winsEl.textContent = wins;
+    lossesEl.textContent = losses;
+    totalEl.textContent = total;
+    winPercentEl.textContent = winPercent;
+}
+
+function resetStyles() {
+    shellOneEl.classList.remove('dot');
+    shellTwoEl.classList.remove('dot');
+    shellThreeEl.classList.remove('dot');
+}
 
 // (don't forget to call any display functions you want to run on page load!)
