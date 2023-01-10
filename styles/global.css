@@ -38,13 +38,12 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
 }
 .shells {
     display: flex;
-    /* justify-items: center; */
     align-content: center;
-    justify-content: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .shell-pic {
     height: 200px;
@@ -61,13 +60,6 @@ button {
     align-items: center;
 }
 
-.page-body {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-}
-
 .laughingCat::after {
     font-size: 8rem;
     content: '😹';
@@ -78,4 +70,15 @@ button {
     font-size: 8rem;
     content: '😻';
     position: absolute;
+}
+
+h2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sim-button {
+    background-color: aquamarine;
 }
