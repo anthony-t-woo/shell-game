@@ -15,6 +15,10 @@ const totalEl = document.getElementById('total-guesses');
 const winPercentEl = document.getElementById('win-percent');
 
 /* State */
+let wins = 0;
+let losses = 0;
+let total = 0;
+let winPercent = 0;
 
 /* Events */
 
