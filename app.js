@@ -1,9 +1,9 @@
 /* Imports */
 // none for this file
 /* Get DOM Elements */
-const shellOneEl = document.getElementById('shell-one');
-const shellTwoEl = document.getElementById('shell-two');
-const shellThreeEl = document.getElementById('shell-three');
+const shellOneEl = document.getElementById('shellOne-container');
+const shellTwoEl = document.getElementById('shellTwo-container');
+const shellThreeEl = document.getElementById('shellThree-container');
 
 const shellOneButtonEl = document.getElementById('shell-one-button');
 const shellTwoButtonEl = document.getElementById('shell-two-button');
@@ -47,12 +47,13 @@ function getRandomLocation(arr) {
 function handleGuess(correctLocation, userGuess) {
     resetStyles();
     total++;
-    // const correctContainer = document.getElementById(`${}`)
 
     if (correctLocation === userGuess) {
         wins++;
+        addHeartCat(correctLocation);
     } else {
         losses++;
+        addLaughingCat(correctLocation);
     }
 
     winPercent = (wins / total) * 100;
@@ -64,9 +65,20 @@ function handleGuess(correctLocation, userGuess) {
 }
 
 function resetStyles() {
-    shellOneEl.classList.remove('dot');
-    shellTwoEl.classList.remove('dot');
-    shellThreeEl.classList.remove('dot');
+    shellOneEl.classList.remove('laughingCat', 'heartCat');
+    shellTwoEl.classList.remove('laughingCat', 'heartCat');
+    shellThreeEl.classList.remove('laughingCat', 'heartCat');
 }
 
+function addLaughingCat(correctLocation) {
+    const correctContainer = document.getElementById(`${correctLocation}-container`);
+    console.log(correctContainer);
+    correctContainer.classList.add('laughingCat');
+}
+
+function addHeartCat(correctLocation) {
+    const correctContainer = document.getElementById(`${correctLocation}-container`);
+    console.log(correctContainer);
+    correctContainer.classList.add('heartCat');
+}
 // (don't forget to call any display functions you want to run on page load!)

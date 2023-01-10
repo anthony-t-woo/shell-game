@@ -68,8 +68,14 @@ button {
     align-items: center;
 }
 
-.dot::after {
+.laughingCat::after {
     font-size: 8rem;
-    content: '😃';
+    content: '😹';
+    position: absolute;
+}
+
+.heartCat::after {
+    font-size: 8rem;
+    content: '😻';
     position: absolute;
 }
