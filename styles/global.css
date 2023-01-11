@@ -32,4 +32,70 @@ header .logo {
 
 main {
     padding: 20px;
+    background-image: url(../assets/cat-background.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    color: grey;
+    font-size: 2rem;
+}
+
+.shell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.shells {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+}
+.shell-pic {
+    height: 200px;
+}
+
+button {
+    width: fit-content;
+    height: 40px;
+    margin: 5px;
+}
+
+input {
+    margin: 10px;
+    background-color: lightcyan;
+}
+
+.results-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+.laughingCat::after {
+    font-size: 8rem;
+    content: '😹';
+    position: absolute;
+}
+
+.heartCat::after {
+    font-size: 8rem;
+    content: '😻';
+    position: absolute;
+}
+
+h2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sim-button {
+    background-color: aquamarine;
+}
+
+.onetime-click {
+    margin-top: 50px;
 }

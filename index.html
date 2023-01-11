@@ -1,39 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <!-- metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- title and favicon -->
+        <title>Web App</title>
+        <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
 
-    <!-- title and favicon -->
-    <title>Web App</title>
-    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+        <!-- js -->
+        <script type="module" src="app.js"></script>
 
-    <!-- js -->
-    <script type="module" src="app.js"></script>
+        <!-- fonts -->
+        <!-- see https://fonts.google.com/ -->
 
-    <!-- fonts -->
-    <!-- see https://fonts.google.com/ -->
+        <!-- css -->
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/global.css" />
+        <!-- add link for page specific css -->
+    </head>
 
-    <!-- css -->
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <!-- add link for page specific css -->
+    <body>
+        <header>
+            <img class="logo" src="assets/html_css_js.png" alt="logo" />
+            <h1>Anthony's Shell Game App</h1>
+        </header>
 
-</head>
-
-<body>
-    <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
-    </header>
-
-    <main>
-
-    </main>
-
-</body>
-
+        <main>
+            <section class="page-body">
+                <h2>Find the sneaky cat</h2>
+                <div class="shells">
+                    <div class="shell" id="shellOne-container">
+                        <p>sneaky cat hid here <span id="was-at-one">0</span> times</p>
+                        <img class="shell-pic" src="./assets/scallop.png" alt="shell #1" />
+                        <button class="onetime-click" id="shell-one-button">
+                            Sneaky Cat is in Shell #1
+                        </button>
+                        <input
+                            type="number"
+                            min="1"
+                            id="shell-one-qty"
+                            placeholder="how many times to test"
+                        />
+                        <button class="sim-button" id="shell-one-simulate">
+                            simulate shell #1 - <span id="spanOne-times">0</span> times
+                        </button>
+                    </div>
+                    <div class="shell" id="shellTwo-container">
+                        <p>sneaky cat hid here <span id="was-at-two">0</span> times</p>
+                        <img class="shell-pic" src="./assets/scallop.png" alt="shell #2" />
+                        <button class="onetime-click" id="shell-two-button">
+                            Sneaky Cat is in Shell #2
+                        </button>
+                        <input
+                            type="number"
+                            min="1"
+                            id="shell-two-qty"
+                            placeholder="how many times to test"
+                        />
+                        <button class="sim-button" id="shell-two-simulate">
+                            simulate shell #2 - <span id="spanTwo-times">0</span> times
+                        </button>
+                    </div>
+                    <div class="shell" id="shellThree-container">
+                        <p>sneaky cat hid here <span id="was-at-three">0</span> times</p>
+                        <img class="shell-pic" src="./assets/scallop.png" alt="shell #3" />
+                        <button class="onetime-click" id="shell-three-button">
+                            Sneaky Cat is in Shell #3
+                        </button>
+                        <input
+                            type="number"
+                            min="1"
+                            id="shell-three-qty"
+                            placeholder="how many times to test"
+                        />
+                        <button class="sim-button" id="shell-three-simulate">
+                            simulate shell #3 - <span id="spanThree-times">0</span> times
+                        </button>
+                    </div>
+                </div>
+                <div class="results-container">
+                    <p>Total Wins: <span id="wins">0</span></p>
+                    <p>Total Losses: <span id="losses">0</span></p>
+                    <p>Total Guesses: <span id="total-guesses">0</span></p>
+                    <p>Win Percentage: <span id="win-percent">0</span>%</p>
+                </div>
+            </section>
+        </main>
+    </body>
 </html>
