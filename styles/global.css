@@ -32,6 +32,12 @@ header .logo {
 
 main {
     padding: 20px;
+    background-image: url(../assets/cat-background.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    color: grey;
+    font-size: 2rem;
 }
 
 .shell {
