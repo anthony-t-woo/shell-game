@@ -51,6 +51,12 @@ main {
 
 button {
     width: fit-content;
+    height: 40px;
+    margin: 5px;
+}
+
+input {
+    margin: 10px;
 }
 
 .results-container {
